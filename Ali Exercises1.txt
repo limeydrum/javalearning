@@ -1,0 +1,113 @@
+3. Declare a character array containing the first 4 letters of the alphabet.
+Write a for loop that prints each letter.
+
+public class HelloWorld {
+
+   public static void main(String args[]) {
+    
+    int[] arr;
+    arr = new int[4];
+    arr[0] = 'a';
+    arr[1] = 'b';
+    arr[2] = 'c';
+    arr[3] = 'd';
+      for(int x = 0; x < arr.length; x++) {
+         System.out.print(arr[x]);
+         System.out.print("\n");
+      }
+   }
+}
+
+4. Write a nested for loop (a for loop inside a for loop) that prints
+'a0123
+b0123
+c0123
+d0123'.
+
+public class HelloWorld {
+
+   public static void main(String args[]) {
+    
+    char[] arr;
+    arr = new char[4];
+    arr[0] = 'a';
+    arr[1] = 'b';
+    arr[2] = 'c';
+    arr[3] = 'd';
+      for(int x = 0; x < arr.length; x++) {
+         System.out.print(arr[x]);
+         for(int y = 0; y < 4; y++)
+         {
+             System.out.print(y);
+         }
+         System.out.print("\n");
+         
+      }
+   }
+}
+
+5. Write a for loop that prints the numbers 1 to 30, but if the number is divisible by 3, print fizz, if it's divisible by 5, print buzz, or if it's divisible by both, print fizzbuzz.
+
+public class HelloWorld {
+
+   public static void main(String args[]) {
+    
+      for(int x = 1; x < 31; x++) {
+         if (x%3 == 0) {
+             System.out.print("fizz");
+         }
+         if (x%5 == 0) {
+             System.out.print("buzz");
+         }
+         if (x%3 != 0 && x%5 != 0) {
+         System.out.print(x);
+         }
+         System.out.print("\n");
+         
+      }
+   }
+}
+
+6. Write a function that takes two ints and returns their product.
+Call it from main and print the result to make sure it works.
+
+public class HelloWorld {
+
+      public static void main(String[] args) {
+          int a = 11;
+          int b = 14;
+int number = product(a,b);
+System.out.print(number);
+System.out.print("\n");
+   }
+
+   public static int product(int x, int y) {
+int z;
+z = x*y;
+return z;
+   }
+
+}
+
+Now write another function that does the same thing but instead of using the multiplication operator (*), do the multiplication with just addition and a for loop.
+
+public class HelloWorld {
+
+      public static void main(String[] args) {
+          int a = 4;
+          int b = 5;
+int number = product(a,b);
+System.out.print(number);
+System.out.print("\n");
+   }
+
+  
+   public static int product(int x, int y) {
+int z = 0; 
+for(int i=1; i <= y; i++) {
+   z = z+x;
+}
+return z;
+   }
+
+}
